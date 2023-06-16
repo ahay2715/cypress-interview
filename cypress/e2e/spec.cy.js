@@ -28,6 +28,32 @@ describe('interview test', () => {
   it('beceom-a-customer form test', () => {
     // Add your code below
     cy.visit('https://www.sysco.com');
+    cy.contains("Become A Customer")
+
+    Cy.get('#Customer').trigger('click')
+
+    Cy.contains('Customer Resgisteration').should('be.visible')
+    cy.get('Are you the primary contact?*').type('No')
+
+
+    Cy.get('First Name*').type('jhon')
+
+    Cy.get('Last Name*').type('Ketty')
+
+    Cy.get('Phone').type(7579220114)
+    Cy.get('Email').type('Abc@gmail.com')
+
+
+    Cy.get('Billing Zip Code*').type(7707)
+
+    Cy.get('Email').type('Abc@gmail.com')
+
+    cy-get('[data-cy-btn_next]').click()
+    cy.contains('[data-cy-billing_zip_code]', '77077').should("be.visible");
+    cy.contains('[data-cy-shipping_zip_code]', '77077').should("be.visible")
+    cy.get('[data-cy-billing_address]').type('1390 Enclave Parkway, Houston, TX 77877 US')
+    cy.get('[type=checkbox]').check()
+    cy.get('[type=checkbox]').uncheck()
     
   });
 });
