@@ -1,9 +1,9 @@
 /**
  * Requirements:
- * 1. Navigate to Sysco.com website.
- * 2. ASSERT: that `Become A Customer` link is visible.
- * 3. Click on `Become A Customer` link.
- * 4. ASSERT: that user lands `Become A Customer` form by asserting the title of the page.
+ * 1. Navigate to portal.sysco.com website.
+ * 2. ASSERT: that `Sign Up Now` button is visible.
+ * 3. Click on `Sign Up Now` button.
+ * 4. ASSERT: that user lands at `Become A Customer` form by asserting the title of the page.
  * 5. On the form, select No for `Are you the primary contact?` dropdown.
  * 6. Fill the rest of the form with fake data. Use 77077 as zip code.
  * 7. Click `Next` button to navigate to second page.
